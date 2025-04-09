@@ -17,7 +17,7 @@ The system will include:
 **Project Details** 
 
 *Project Statement:* 
-In this case project, we are trying to better understand/provide insight into how AI plays a roll in human resources management. Specifically, we are looking at how company recruiters use AI to evaluate potential candidates. We are achieving this by creating a model and website that evaluates a potential candidate's resume, and recommends them based on the analysis of the model. 
+In this case project, we are trying to better understand/provide insight into how AI plays a roll in human resources management. Specifically, we are looking at how recruiters use AI to evaluate potential candidates. We are achieving this by creating a model and website that evaluates a potential candidate's resume, and recommends them based on the analysis of the model. 
 
 *What Next?*
 
