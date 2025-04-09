@@ -22,9 +22,15 @@ In this case project, we are trying to better understand/provide insight into ho
 *What Next?*
 
 *Responsible AI Considerations:*
+As we examine the use of AI in Human Resources—specifically, resume screening tools—we recognize the importance of designing and evaluating these systems with responsibility, transparency, and fairness at the core. Key responsible AI principles we considered include:
+-  Fairness and Bias Mitigation: AI-driven resume scanners may inadvertently learn and perpetuate historical biases present in hiring data (e.g., gender, race, or educational background). Our project explores how training data, feature selection, and model design can introduce bias—and how techniques like auditing, de-biasing, and algorithmic fairness checks can help mitigate it.
+-  Transparency and Explainability
+-  Accountability
+-  Privacy and Data Security
+-  Accessibility and Inclusion
 
 *Reference List:*
-1. Using artificial intelligence for hiring talents in a moderated mechanism: https://fbj.springeropen.com/articles/10.1186/s43093-024-00303-x
+1. Using Artificial Intelligence for Hiring Talents in a Moderated Mechanism: https://fbj.springeropen.com/articles/10.1186/s43093-024-00303-x
 
 *Additional Resources:*
 1. ChatGPT: https://chatgpt.com/
