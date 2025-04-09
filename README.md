@@ -37,4 +37,8 @@ As we examine the use of AI in Human Resources—specifically, resume screening 
 2. Faker Python Package Documentation: https://faker.readthedocs.io/en/master/
 3. Backround Info: https://fitsmallbusiness.com/ai-hiring-trends-and-statistics/
 
+**Graphics**
+![Screenshot 2025-04-09 180524](https://github.com/user-attachments/assets/5de61952-8736-4d93-a390-63083958033f)
+
+
 
