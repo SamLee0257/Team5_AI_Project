@@ -2,7 +2,7 @@
 
 Team 5 final project on the use of AI in Human Resource activities. 
 
-**Authors:** HAS TO BE LINKED TO OUR ACTUAL GITHUB and readme profile description
+**Authors:** [Marshall Pender](https://github.com/marshallpender)
 
 **Project Scope** 
 
