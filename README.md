@@ -25,6 +25,7 @@ In this case project, we are trying to better understand/provide insight into ho
 
 *Reference List:*
 1. Using artificial intelligence for hiring talents in a moderated mechanism: https://fbj.springeropen.com/articles/10.1186/s43093-024-00303-x
+
 *Additional Resources:*
 1. ChatGPT: https://chatgpt.com/
 2. Faker Python Package Documentation: https://faker.readthedocs.io/en/master/
