@@ -35,5 +35,6 @@ As we examine the use of AI in Human Resources—specifically, resume screening 
 *Additional Resources:*
 1. ChatGPT: https://chatgpt.com/
 2. Faker Python Package Documentation: https://faker.readthedocs.io/en/master/
+3. https://fitsmallbusiness.com/ai-hiring-trends-and-statistics/
 
 
