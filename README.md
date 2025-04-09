@@ -2,7 +2,7 @@
 
 Team 5 final project on the use of AI in Human Resource activities. 
 
-**Authors:** Thomas Lavelle, Drew Messick, and Marshall Pender, Sam Lee
+**Authors:** HAS TO BE LINKED TO OUR ACTUAL GITHUB and readme profile description
 
 **Project Scope** 
 
