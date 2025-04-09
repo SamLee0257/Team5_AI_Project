@@ -26,5 +26,7 @@ In this case project, we are trying to better understand/provide insight into ho
 *Reference List:*
 
 *Additional Resources:*
+1. ChatGPT: https://chatgpt.com/
+2. Faker Python Package Documentation: https://faker.readthedocs.io/en/master/
 
 
