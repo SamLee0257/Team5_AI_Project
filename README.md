@@ -2,7 +2,7 @@
 
 Team 5 final project on the use of AI in Human Resource activities. 
 
-**Authors:** [Marshall Pender](https://github.com/marshallpender), [Drew Messick](https://github.com/drewmessick), [Sam Lee](https://github.com/SamLee0257)
+**Authors:** [Marshall Pender](https://github.com/marshallpender), [Drew Messick](https://github.com/drewmessick), [Sam Lee](https://github.com/SamLee0257), [Thomas Lavelle](https://github.com/tlav03)
 
 **Project Scope** 
 
