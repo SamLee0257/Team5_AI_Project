@@ -16,8 +16,9 @@ The system will include:
 
 **Project Details** 
 
-*Project Statement:* 
-In this case project, we are trying to better understand/provide insight into how AI plays a roll in human resources management. Specifically, we are looking at how recruiters use AI to evaluate potential candidates. We are achieving this by creating a model and website that evaluates a potential candidate's resume, and recommends them based on the analysis of the model. 
+*Project Statement:* How can human resource departments efficiently manage and evaluate a large volume of resumes? ​
+
+Solution: We developed a model that classifies resumes as "qualified" or "not qualified" based on key attributes. Additionally, we created a user-friendly website powered by AI to filter resumes, automatically generating a Google Sheet that lists resumes matching the specified criteria.
 
 *What Next?*
 As AI continues to transform the hiring landscape, understanding how resume scanners shape access to opportunities is more critical than ever. Looking forward, organizations will need to adopt more ethical AI practices, invest in explainable tools, and ensure human oversight in automated hiring. With the rise of regulations and increased public awareness, the future of AI in HR will demand both innovation and responsibility.
