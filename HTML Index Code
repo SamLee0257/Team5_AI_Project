@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      :root {
+        --primary-green: #1b5e20;
+        --secondary-green: #2e7d32;
+        --light-green: #4caf50;
+        --primary-gold: #ffd700;
+        --secondary-gold: #ffeb3b;
+        --light-gold: #fff9c4;
+      }
+
+      body {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .card {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-top: 3px solid var(--primary-gold);
+      }
+
+      .input-field {
+        margin-bottom: 15px;
+      }
+
+      #loading {
+        display: none;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      #result {
+        display: none;
+        margin-top: 20px;
+      }
+
+      .chip {
+        margin-right: 5px;
+        background-color: var(--light-gold);
+      }
+
+      h3.page-title {
+        color: var(--primary-green);
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+      }
+
+      .card-title {
+        color: var(--secondary-green);
+        font-weight: bold;
+      }
+
+      .btn {
+        background-color: var(--primary-green);
+      }
+
+      .btn:hover {
+        background-color: var(--secondary-green);
+      }
+
+      input:focus {
+        border-bottom: 1px solid var(--primary-green) !important;
+        box-shadow: 0 1px 0 0 var(--primary-green) !important;
+      }
+
+      label.active {
+        color: var(--primary-green) !important;
+      }
+
+      .helper-text {
+        color: #777;
+      }
+
+      nav {
+        background-color: var(--primary-green);
+        margin-bottom: 20px;
+      }
+
+      nav .brand-logo {
+        padding-left: 15px;
+      }
+
+      .progress {
+        background-color: var(--light-gold);
+      }
+
+      .progress .indeterminate {
+        background-color: var(--primary-gold);
+      }
+
+      .card .card-content {
+        position: relative;
+      }
+
+      .card-highlight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: var(--primary-gold);
+      }
+
+      .select-wrapper input.select-dropdown:focus {
+        border-bottom: 1px solid var(--primary-green) !important;
+      }
+
+      .dropdown-content li>a, .dropdown-content li>span {
+        color: var(--secondary-green) !important;
+      }
+
+      .success-panel {
+        background-color: var(--light-gold);
+        border-left: 4px solid var(--primary-gold);
+        padding: 15px;
+      }
+
+      .folder-box {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 4px;
+        background-color: white;
+      }
+
+      .gold-highlight {
+        background-color: var(--light-gold);
+        padding: 15px;
+        border-radius: 4px;
+        border-left: 4px solid var(--primary-gold);
+      }
+      
+      .collection .collection-item {
+        background: transparent;
+        border: none;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+          <i class="material-icons left">description</i>Resume Filter
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h3 class="center-align page-title">Resume Filtering System</h3>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-highlight"></div>
+          <span class="card-title">Select Resume Source</span>
+          <div class="folder-selector">
+            <p>First, select the Google Drive folder containing resume documents:</p>
+            <div class="folder-box">
+              <div class="input-field">
+                <select id="folderSelect" class="browser-default">
+                  <option value="" disabled selected>Loading folders...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-highlight"></div>
+          <span class="card-title">Filter Options</span>
+          <form id="filterForm">
+            <input type="hidden" id="folderId" name="folderId">
+
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <input id="gpa" name="gpa" type="number" step="0.1" min="0" max="4.0" class="validate">
+                <label for="gpa">Minimum GPA (e.g., 3.5)</label>
+                <span class="helper-text">Resumes with this GPA and higher will be shown</span>
+              </div>
+            </div>
+
+            <div class="input-field">
+              <input id="universities" name="universities" type="text" class="validate">
+              <label for="universities">Universities (comma-separated)</label>
+              <span class="helper-text">Resumes containing any of these universities will be shown</span>
+              <div id="universityChips" class="chips-placeholder"></div>
+            </div>
+
+            <div class="input-field">
+              <input id="keywords" name="keywords" type="text" class="validate">
+              <label for="keywords">Keywords (comma-separated)</label>
+              <span class="helper-text">E.g., python, sql, javascript (OR logic will be applied)</span>
+            </div>
+
+            <div class="center-align" style="margin-top: 30px;">
+              <button id="submitBtn" class="btn waves-effect waves-light" type="submit">
+                Filter Resumes
+                <i class="material-icons right">search</i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="loading" class="progress">
+        <div class="indeterminate"></div>
+        <p>Processing resumes... This may take a few minutes depending on the number of files.</p>
+      </div>
+
+      <div id="result" class="card">
+        <div class="card-content">
+          <div class="card-highlight"></div>
+          <span class="card-title">Results</span>
+          <div id="resultContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      // Load when the page is ready
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Materialize components
+        M.AutoInit();
+        
+        // Load folders from Google Drive
+        loadFolders();
+        
+        // Setup university chips
+        setupUniversityChips();
+        
+        // Setup form submission
+        document.getElementById('filterForm').addEventListener('submit', handleFormSubmit);
+        
+        // Setup folder selection change handler
+        document.getElementById('folderSelect').addEventListener('change', function() {
+          document.getElementById('folderId').value = this.value;
+        });
+      });
+      
+      /**
+       * Load folders from Google Drive
+       */
+      function loadFolders() {
+        google.script.run
+          .withSuccessHandler(populateFolderDropdown)
+          .withFailureHandler(handleError)
+          .getFolders();
+      }
+      
+      /**
+       * Populate folder dropdown with folder data
+       */
+      function populateFolderDropdown(folders) {
+        const select = document.getElementById('folderSelect');
+        select.innerHTML = '<option value="" disabled selected>Choose a folder</option>';
+        
+        folders.forEach(function(folder) {
+          const option = document.createElement('option');
+          option.value = folder.id;
+          option.textContent = folder.name;
+          select.appendChild(option);
+        });
+        
+        // Re-initialize the select element
+        M.FormSelect.init(select);
+      }
+      
+      /**
+       * Setup university chips input
+       */
+      function setupUniversityChips() {
+        const universityInput = document.getElementById('universities');
+        
+        // Update the hidden input when typing
+        universityInput.addEventListener('input', function() {
+          const chips = document.getElementById('universityChips');
+          
+          // Clear existing chips
+          chips.innerHTML = '';
+          
+          // Create chips for each university
+          if (this.value) {
+            const universities = this.value.split(',');
+            universities.forEach(function(university) {
+              university = university.trim();
+              if (university) {
+                const chip = document.createElement('div');
+                chip.className = 'chip';
+                chip.textContent = university;
+                chips.appendChild(chip);
+              }
+            });
+          }
+        });
+      }
+      
+      /**
+       * Handle form submission
+       */
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        // Get form data
+        const formData = {
+          folderId: document.getElementById('folderId').value,
+          gpa: document.getElementById('gpa').value,
+          universities: document.getElementById('universities').value,
+          keywords: document.getElementById('keywords').value
+        };
+        
+        // Validate folder selection
+        if (!formData.folderId) {
+          M.toast({html: 'Please select a folder first!', classes: 'red'});
+          return;
+        }
+        
+        // Show loading indicator
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('result').style.display = 'none';
+        document.getElementById('submitBtn').disabled = true;
+        
+        // Call the Google Apps Script function
+        google.script.run
+          .withSuccessHandler(displayResults)
+          .withFailureHandler(handleError)
+          .filterResumes(formData);
+      }
+      
+      /**
+       * Display results returned from the server
+       */
+      function displayResults(html) {
+        // Hide loading indicator
+        document.getElementById('loading').style.display = 'none';
+        
+        // Display results
+        document.getElementById('resultContent').innerHTML = html;
+        document.getElementById('result').style.display = 'block';
+        
+        // Re-enable submit button
+        document.getElementById('submitBtn').disabled = false;
+        
+        // Scroll to results
+        document.getElementById('result').scrollIntoView({behavior: 'smooth'});
+      }
+      
+      /**
+       * Handle errors from the server
+       */
+      function handleError(error) {
+        // Hide loading indicator
+        document.getElementById('loading').style.display = 'none';
+        
+        // Display error message
+        M.toast({html: 'Error: ' + error, classes: 'red', displayLength: 5000});
+        
+        // Re-enable submit button
+        document.getElementById('submitBtn').disabled = false;
+      }
+    </script>
+  </body>
+</html>
