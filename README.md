@@ -31,11 +31,24 @@ As AI continues to transform the hiring landscape, understanding how resume scan
 
 **Article/Study**
 
-*Summary*
+*Title*: Using Artificial Intelligence for Hiring Talents in a Moderated Mechanism
 
-Title: Using Artificial Intelligence for Hiring Talents in a Moderated Mechanism
+*Authors*: Muhaiminul Islam, Md. Mahbubur Rahman, Md. Abu Taher, G. M. Azmal Ali Quaosar & Md. Aftab Uddin
 
-Authors: Muhaiminul Islam, Md. Mahbubur Rahman, Md. Abu Taher, G. M. Azmal Ali Quaosar & Md. Aftab Uddin
+*Summary*: This study explores why AI adoption in employee recruitment remains low in developing countries, focusing specifically on Bangladesh. Using an extended Unified Theory of Acceptance and Use of Technology (UTAUT) framework, it examines key behavioral and contextual factors influencing AI use, including performance expectancy, facilitating conditions, hedonic motivation, and technology complexity. The study also considers demographic moderators such as age, gender, experience, and voluntariness.
+
+*Methodology:* The paper uses a cross-sectional survey of 270 HR professionals in Dhaka and Chattogram that was analyzed using a Partial Least Squares Structural Equation Modeling (PLS-SEM) and a Necessary Condition Analysis (NCA).
+
+*Key Findings*:
+- Significant predictors of intention to use AI: Performance expectancy, facilitating conditions, and hedonic motivation.
+- Non-significant predictors: Effort expectancy, social influence, and technology complexity.
+- Actual AI usage: Driven by intention to use, facilitating conditions, effort expectancy, and hedonic motivation.
+- Moderating effects: Only gender had a significant effect (moderated the link between effort expectancy and intention to use).
+- NCA findings: Performance expectancy is a necessary condition for intention to use; intention is a necessary condition for actual use.
+
+*Implications*: 
+- HR professionals should focus on performance benefits and enjoyable user experiences to drive adoption.
+- Gender-sensitive training may help address effort-related adoption barriers.
 
 *Responsible AI Considerations:*
 As we examine the use of AI in Human Resources—specifically, resume screening tools—we recognize the importance of designing and evaluating these systems with responsibility, transparency, and fairness at the core. Key responsible AI principles we considered include:
