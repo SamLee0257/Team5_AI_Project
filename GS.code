@@ -1,0 +1,698 @@
+let universities = [
+    "Massachusetts Institute of Technology",
+    "Yale University",
+    "Stanford University",
+    "Harvard University",
+    "Dartmouth College",
+    "Columbia University",
+    "Brown University",
+    "Rice University",
+    "Vanderbilt University",
+    "Princeton University",
+    "University of Pennsylvania",
+    "Duke University",
+    "Georgetown University",
+    "Harvey Mudd College",
+    "Washington University in St. Louis",
+    "Pomona College",
+    "Northwestern University",
+    "University of Chicago",
+    "California Institute of Technology",
+    "University of California - Los Angeles",
+    "Cornell University",
+    "Johns Hopkins University",
+    "University of Michigan - Ann Arbor",
+    "Claremont McKenna College",
+    "University of Southern California",
+    "University of Notre Dame",
+    "University of California - Berkeley",
+    "Amherst College",
+    "University of Virginia",
+    "Williams College",
+    "Swarthmore College",
+    "University of North Carolina at Chapel Hill",
+    "University of California - Santa Barbara",
+    "University of Florida",
+    "University of California - San Diego",
+    "University of California - Irvine",
+    "University of Texas at Austin",
+    "University of Illinois Urbana-Champaign",
+    "University of Wisconsin",
+    "University of Washington",
+    "University of Georgia",
+    "University of Maryland - College Park",
+    "University of Pittsburgh",
+    "University of Minnesota Twin Cities",
+    "University of Massachusetts Amherst",
+    "University of Connecticut",
+    "University of Delaware",
+    "University of Colorado Boulder",
+    "University of Iowa",
+    "University of Kansas",
+    "University of Missouri",
+    "University of Nebraska-Lincoln",
+    "University of Oklahoma",
+    "University of Oregon",
+    "University of Tennessee",
+    "University of Utah",
+    "University of Vermont",
+    "University of Alabama",
+    "University of Arizona",
+    "University of Arkansas",
+    "University of Kentucky",
+    "University of Mississippi",
+    "University of Nevada - Reno",
+    "University of New Hampshire",
+    "University of New Mexico",
+    "University of Rhode Island",
+    "University of South Carolina",
+    "University of South Dakota",
+    "University of Wyoming",
+    "Auburn University",
+    "Baylor University",
+    "Boston College",
+    "Boston University",
+    "Brandeis University",
+    "Brigham Young University",
+    "Case Western Reserve University",
+    "Clemson University",
+    "College of William & Mary",
+    "Colorado School of Mines",
+    "Drexel University",
+    "Emory University",
+    "Florida State University",
+    "Fordham University",
+    "George Washington University",
+    "Georgetown University",
+    "Georgia Institute of Technology",
+    "Indiana University Bloomington",
+    "Iowa State University",
+    "Lehigh University",
+    "Louisiana State University",
+    "Marquette University",
+    "Michigan State University",
+    "New York University",
+    "Northeastern University",
+    "Ohio State University",
+    "Oklahoma State University",
+    "Oregon State University",
+    "Pennsylvania State University",
+    "Pepperdine University",
+    "Purdue University",
+    "Rensselaer Polytechnic Institute",
+    "Rutgers University",
+    "Saint Louis University",
+    "San Diego State University",
+    "Santa Clara University",
+    "Southern Methodist University",
+    "Syracuse University",
+    "Temple University",
+    "Texas A&M University",
+    "Texas Christian University",
+    "Tufts University",
+    "Tulane University",
+    "University at Buffalo",
+    "University of Alabama at Birmingham",
+    "University of California - Davis",
+    "University of California - Riverside",
+    "University of Central Florida",
+    "University of Cincinnati",
+    "University of Denver",
+    "University of Hawaii at Manoa",
+    "University of Houston",
+    "University of Louisville",
+    "University of Miami",
+    "University of North Texas",
+    "University of San Diego",
+    "University of San Francisco",
+    "University of Tulsa",
+    "Villanova University",
+    "Virginia Tech",
+    "Wake Forest University",
+    "Washington State University",
+    "Worcester Polytechnic Institute",
+    "American University",
+    "Arizona State University",
+    "Binghamton University",
+    "California Polytechnic State University",
+    "Chapman University",
+    "DePaul University",
+    "Elon University",
+    "Florida International University",
+    "Gonzaga University",
+    "Howard University",
+    "Illinois Institute of Technology",
+    "James Madison University",
+    "Loyola Marymount University",
+    "Miami University",
+    "Missouri University of Science & Technology",
+    "Montana State University",
+    "North Carolina State University",
+    "Northern Arizona University",
+    "Portland State University",
+    "Rochester Institute of Technology",
+    "San Francisco State University",
+    "San Jose State University",
+    "Seattle University",
+    "Seton Hall University",
+    "Stevens Institute of Technology",
+    "Stony Brook University",
+    "University of Akron",
+    "University of Alaska Fairbanks",
+    "University of California - Merced",
+    "University of Dayton",
+    "University of Idaho",
+    "University of Illinois at Chicago",
+    "University of Kentucky",
+    "University of Maine",
+    "University of Maryland - Baltimore County",
+    "University of Massachusetts Boston",
+    "University of Memphis",
+    "University of Montana",
+    "University of Nevada - Las Vegas",
+    "University of New Orleans",
+    "University of North Carolina at Charlotte",
+    "University of North Carolina at Greensboro",
+    "University of North Dakota",
+    "University of Northern Colorado",
+    "University of Puerto Rico",
+    "University of Rhode Island",
+    "University of South Alabama",
+    "University of South Florida",
+    "University of Southern Mississippi",
+    "University of Texas at Arlington",
+    "University of Texas at Dallas",
+    "University of Texas at El Paso",
+    "University of Texas at San Antonio",
+    "University of Toledo",
+    "University of West Florida",
+    "University of Wisconsin - Milwaukee",
+    "Utah State University",
+    "Virginia Commonwealth University",
+    "West Virginia University",
+    "Western Michigan University",
+    "Wichita State University",
+    "Wright State University",
+    "Yeshiva University",
+    "Appalachian State University",
+    "Ball State University",
+    "Boise State University",
+    "Bowling Green State University",
+    "California State University - Fullerton",
+    "California State University - Long Beach",
+    "California State University - Los Angeles",
+    "California State University - Northridge",
+    "Central Michigan University",
+    "CUNY Hunter College",
+    "East Carolina University",
+    "Eastern Michigan University",
+    "Florida Atlantic University",
+    "Georgia State University",
+    "Grand Valley State University",
+    "Indiana University-Purdue University Indianapolis",
+    "Kansas State University",
+    "Kennesaw State University",
+    "Kent State University",
+    "Liberty University",
+    "Louisiana Tech University",
+    "William and Mary",
+    "William & Mary",
+    "College of William & Mary",
+    "Pittsburgh University",
+    "University of Pittsburgh",
+    "Longwood University",
+    "Lynchburg University",
+    "University of Lynchburg",
+    "Hampden Sydney",
+    "Hampden Sydney College",
+    "Wake Forest University",
+    "California State University - Fullerton",
+    "California State University - Long Beach",
+    "California State University - Los Angeles",
+    "California State University - Northridge",
+    "Central Michigan University",
+    "CUNY Hunter College",
+    "East Carolina University",
+    "Eastern Michigan University",
+    "Florida Atlantic University",
+    "Georgia State University",
+    "Grand Valley State University",
+    "Indiana University-Purdue University Indianapolis",
+    "Kansas State University",
+    "Kennesaw State University",
+    "Kent State University",
+    "Liberty University",
+    "Louisiana Tech University",
+    "Loyola University Chicago",
+    "Middle Tennessee State University",
+    "New Jersey Institute of Technology",
+    "Northern Illinois University",
+    "Oakland University",
+    "Old Dominion University",
+    "Rowan University",
+    "San Francisco State University",
+    "San Jose State University",
+    "Southern Illinois University Carbondale",
+    "Southern Illinois University Edwardsville",
+    "Texas State University",
+    "The New School",
+    "University of Alabama in Huntsville",
+    "University of Baltimore",
+    "University of Central Arkansas",
+    "University of Central Oklahoma",
+    "University of Houston-Clear Lake",
+    "University of Louisiana at Lafayette",
+    "University of Louisiana at Monroe",
+    "University of Massachusetts Dartmouth",
+    "University of Michigan-Dearborn",
+    "University of Michigan-Flint",
+    "University of North Carolina Wilmington",
+    "University of North Florida",
+    "University of Northern Iowa",
+    "University of Southern Indiana",
+    "University of Southern Maine",
+    "University of Texas Rio Grande Valley",
+    "University of West Georgia",
+    "University of Wisconsin-Eau Claire",
+    "University of Wisconsin-La Crosse",
+    "University of Wisconsin-Stevens Point",
+    "University of Wisconsin-Whitewater",
+    "Valdosta State University",
+    "Western Carolina University",
+    "Western Illinois University",
+    "Western Kentucky University",
+    "Western Washington University",
+    "Winston-Salem State University",
+    "Wright State University",
+    "Youngstown State University",
+    "Adelphi University",
+    "Alfred University",
+    "American University",
+    "Andrews University",
+    "Appalachian State University",
+    "Arcadia University",
+    "Auburn University at Montgomery",
+    "Augustana College",
+    "Azusa Pacific University",
+    "Ball State University",
+    "Barry University",
+    "Belmont University",
+    "Benedictine University",
+    "Bentley University",
+    "Berklee College of Music",
+    "Biola University",
+    "Boise State University",
+    "Bradley University",
+    "California Baptist University",
+    "California Lutheran University",
+    "California State Polytechnic University, Pomona",
+    "California State University - Bakersfield",
+    "California State University - Chico",
+    "California State University - Dominguez Hills",
+    "California State University - East Bay",
+    "California State University - Fresno",
+    "California State University - Monterey Bay",
+    "California State University - Sacramento",
+    "California State University - San Bernardino",
+    "California State University - San Marcos",
+    "California State University - Stanislaus",
+    "Campbell University",
+    "Canisius College",
+    "Capital University",
+    "Carroll University",
+    "Carthage College",
+    "Cedarville University",
+    "Central Connecticut State University",
+    "Central Washington University",
+    "Charleston Southern University",
+    "Christopher Newport University",
+    "City College of New York (CUNY)",
+    "Clarion University of Pennsylvania",
+    "Clarkson University",
+    "Cleveland State University",
+    "Coastal Carolina University",
+    "College of Charleston",
+    "College of Saint Benedict",
+    "College of Staten Island (CUNY)",
+    "Columbus State University",
+    "Concordia University Chicago",
+    "Concordia University Irvine",
+    "Concordia University Wisconsin",
+    "Creighton University",
+    "Dallas Baptist University",
+    "Delaware State University",
+    "Delta State University",
+    "DeSales University",
+    "Dominican University",
+    "Drake University",
+    "East Stroudsburg University of Pennsylvania",
+    "Eastern Connecticut State University",
+    "Eastern Kentucky University",
+    "Eastern Washington University",
+    "Edinboro University of Pennsylvania",
+    "Embry-Riddle Aeronautical University - Daytona Beach",
+    "Embry-Riddle Aeronautical University - Prescott",
+    "Fairfield University",
+    "Fairleigh Dickinson University",
+    "Fayetteville State University",
+    "Ferris State University",
+    "Florida A&M University",
+    "Florida Gulf Coast University",
+    "Framingham State University",
+    "Frostburg State University",
+    "Gallaudet University",
+    "Gardner-Webb University",
+    "George Mason University",
+    "Georgia Southern University",
+    "Georgia Southwestern State University",
+    "Gonzaga University",
+    "Governors State University",
+    "Grambling State University",
+    "Grand Canyon University",
+    "Hamline University",
+    "Hampton University",
+    "Harding University",
+    "Hawaii Pacific University",
+    "Henderson State University",
+    "High Point University",
+    "Hofstra University",
+    "Humboldt State University",
+    "Illinois State University",
+    "Indiana State University",
+    "Indiana University East",
+    "Indiana University Kokomo",
+    "Indiana University Northwest",
+    "Indiana University South Bend",
+    "Indiana University Southeast",
+    "Iona College",
+    "Ithaca College",
+    "Jackson State University",
+    "Jacksonville State University",
+    "Jacksonville University",
+    "John Carroll University",
+    "Kean University",
+    "Keene State College",
+    "Kettering University",
+    "La Salle University",
+    "Lamar University",
+    "Le Moyne College",
+    "Lewis University",
+    "Lincoln University",
+    "Lindenwood University",
+    "Longwood University",
+    "Loyola University Maryland",
+    "Loyola University New Orleans",
+    "Lubbock Christian University",
+    "Lynn University",
+    "Madonna University",
+    "Manhattan College",
+    "Marist College",
+    "Marshall University",
+    "Marymount University",
+    "McNeese State University",
+    "Mercer University",
+    "Metropolitan State University",
+    "Metropolitan State University of Denver",
+    "Millersville University of Pennsylvania",
+    "Minnesota State University, Mankato",
+    "Minnesota State University Moorhead",
+    "Mississippi College",
+    "Mississippi State University",
+    "Missouri State University",
+    "Monmouth University",
+    "Montclair State University",
+    "Morehead State University",
+    "Morgan State University",
+    "Mount St. Mary's University",
+    "Murray State University",
+    "National University",
+    "Nazareth College",
+    "New England College",
+    "New York Institute of Technology",
+    "North Carolina A&T State University",
+    "North Carolina Central University",
+    "North Dakota State University",
+    "Northeastern Illinois University",
+    "University of California Pennslyvania"
+    // End of list
+];
+
+/**
+ * Creates the web app user interface
+ */
+function doGet() {
+  const template = HtmlService.createTemplateFromFile('Index');
+  template.universities = universities;
+  return template.evaluate()
+    .setTitle('Resume Filter System')
+    .setFaviconUrl('https://www.google.com/favicon.ico');
+}
+
+/**
+ * Includes HTML files
+ */
+function include(filename) {
+  return HtmlService.createHtmlOutputFromFile(filename).getContent();
+}
+
+/**
+ * Original function renamed to maintain backward compatibility
+ * Processes selected resume files and filters based on criteria
+ */
+function processResumes(formData) {
+  return filterResumes(formData);
+}
+
+/**
+ * Processes selected resume files and filters based on criteria
+ * This matches the HTML's expected function name
+ */
+function filterResumes(formData) {
+  try {
+    // Get the folder that contains the resumes
+    const folder = DriveApp.getFolderById(formData.folderId);
+    if (!folder) {
+      throw new Error("Folder not found");
+    }
+    
+    // Get all files in the folder
+    const files = folder.getFiles();
+    const results = [];
+    
+    // Parse filter criteria
+    const minGPA = formData.gpa ? parseFloat(formData.gpa) : 0;
+    // Handle universities whether it's an array or string
+    const universityList = Array.isArray(formData.universities) 
+      ? formData.universities.map(u => u.toLowerCase())
+      : (formData.universities ? formData.universities.split(',').map(u => u.trim().toLowerCase()) : []);
+      
+    // Handle keywords whether it's an array or string
+    const keywords = Array.isArray(formData.keywords)
+      ? formData.keywords.map(k => k.toLowerCase())
+      : (formData.keywords ? formData.keywords.split(',').map(k => k.trim().toLowerCase()) : []);
+    
+    // Process each file
+    while (files.hasNext()) {
+      const file = files.next();
+      const fileName = file.getName();
+      
+      // Skip non-Google Doc files
+      if (file.getMimeType() !== MimeType.GOOGLE_DOCS) {
+        continue;
+      }
+      
+      // Process the Google Doc content
+      const doc = DocumentApp.openById(file.getId());
+      const text = doc.getBody().getText().toLowerCase();
+      const resumeData = extractResumeData(doc);
+      
+      // Apply filters
+      const passedGPAFilter = !formData.gpa || (resumeData.gpa >= minGPA);
+      const passedUniversityFilter = !universityList.length || universityList.some(uni => 
+        resumeData.universities.some(u => u.toLowerCase().includes(uni)));
+      const passedKeywordFilter = !keywords.length || keywords.some(keyword => text.includes(keyword));
+      
+      // Add to results if it passes all filters
+      if (passedGPAFilter && passedUniversityFilter && passedKeywordFilter) {
+        results.push({
+          name: resumeData.name,
+          email: resumeData.email,
+          phone: resumeData.phone,
+          gpa: resumeData.gpa,
+          universities: resumeData.universities.join(", "),
+          matchedKeywords: keywords.filter(keyword => text.includes(keyword)).join(", "),
+          fileLink: file.getUrl()
+        });
+      }
+    }
+    
+    // Create output spreadsheet
+    const spreadsheetResult = createOutputSpreadsheet(results);
+    
+    // Return HTML formatted result for the UI
+    return formatResultsAsHtml(spreadsheetResult, results);
+    
+  } catch (error) {
+    Logger.log("Error: " + error.toString());
+    throw error; // This will trigger the failure handler in the UI
+  }
+}
+
+/**
+ * Extracts structured data from a resume document
+ */
+function extractResumeData(doc) {
+  const text = doc.getBody().getText();
+  const lowerText = text.toLowerCase();
+  
+  // Extract name (assuming it's at the top of the document)
+  const name = doc.getBody().getParagraphs()[0].getText().trim();
+  
+  // Extract email using regex
+  const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+  const emailMatch = text.match(emailRegex);
+  const email = emailMatch ? emailMatch[0] : "";
+  
+  // Extract phone using regex
+  const phoneRegex = /(\+\d{1,2}\s?)?(\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}/;
+  const phoneMatch = text.match(phoneRegex);
+  const phone = phoneMatch ? phoneMatch[0] : "";
+  
+  // Extract GPA using regex
+  const gpaRegex = /gpa[\s:]*([0-9.]+)/i;
+  const gpaMatch = lowerText.match(gpaRegex);
+  const gpa = gpaMatch ? parseFloat(gpaMatch[1]) : 0;
+  
+  // Find universities
+  const foundUniversities = [];
+  universities.forEach(uni => {
+    if (lowerText.includes(uni.toLowerCase())) {
+      foundUniversities.push(uni);
+    }
+  });
+  
+  return {
+    name: name,
+    email: email,
+    phone: phone,
+    gpa: gpa,
+    universities: foundUniversities
+  };
+}
+
+/**
+ * Creates output spreadsheet with filtered results
+ */
+function createOutputSpreadsheet(results) {
+  try {
+    const timestamp = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd_HH:mm:ss");
+    const ss = SpreadsheetApp.create("Resume_Filter_Results_" + timestamp);
+    const sheet = ss.getActiveSheet();
+    
+    // Set up headers (without years of experience)
+    sheet.appendRow([
+      "Name", 
+      "Email", 
+      "Phone Number", 
+      "GPA", 
+      "Universities", 
+      "Keywords", 
+      "Resume Link"
+    ]);
+    
+    // Format header row
+    sheet.getRange(1, 1, 1, 7)
+      .setFontWeight("bold")
+      .setBackground("#f3f3f3");
+    
+    // Add data rows
+    results.forEach(result => {
+      sheet.appendRow([
+        result.name,
+        result.email,
+        result.phone,
+        result.gpa,
+        result.universities,
+        result.matchedKeywords,
+        result.fileLink
+      ]);
+    });
+    
+    // Auto-resize columns
+    sheet.autoResizeColumns(1, 7);
+    
+    // Format links column as hyperlinks
+    const linkRange = sheet.getRange(2, 7, results.length, 1);
+    linkRange.setFontColor("blue")
+             .setFontLine("underline");
+    
+    return { 
+      success: true, 
+      spreadsheetUrl: ss.getUrl(),
+      resultCount: results.length
+    };
+    
+  } catch (error) {
+    Logger.log("Error creating spreadsheet: " + error.toString());
+    return { success: false, error: error.toString() };
+  }
+}
+
+/**
+ * Gets a list of folders from Google Drive to select from
+ */
+function getFolders() {
+  const folders = DriveApp.getFolders();
+  const folderList = [];
+  
+  while (folders.hasNext()) {
+    const folder = folders.next();
+    folderList.push({
+      id: folder.getId(),
+      name: folder.getName()
+    });
+  }
+  
+  return folderList;
+}
+
+/**
+ * Formats the results as HTML for display in the UI
+ */
+function formatResultsAsHtml(spreadsheetResult, results) {
+  if (!spreadsheetResult.success) {
+    return '<div class="red-text">Error: ' + spreadsheetResult.error + '</div>';
+  }
+  
+  let html = '<div class="success-panel">';
+  html += '<h5>' + results.length + ' matching resumes found</h5>';
+  html += '<p>Results have been exported to a spreadsheet.</p>';
+  html += '<p><a href="' + spreadsheetResult.spreadsheetUrl + '" target="_blank" class="btn waves-effect waves-light">';
+  html += '<i class="material-icons left">open_in_new</i>Open Spreadsheet</a></p>';
+  html += '</div>';
+  
+  if (results.length > 0) {
+    html += '<ul class="collection">';
+    results.slice(0, 5).forEach(result => {
+      html += '<li class="collection-item">';
+      html += '<div class="gold-highlight">';
+      html += '<strong>' + result.name + '</strong><br>';
+      html += 'Email: ' + result.email + '<br>';
+      html += 'Phone: ' + result.phone + '<br>';
+      html += 'GPA: ' + result.gpa + '<br>';
+      if (result.universities) html += 'Universities: ' + result.universities + '<br>';
+      if (result.matchedKeywords) html += 'Keywords: ' + result.matchedKeywords + '<br>';
+      html += '<a href="' + result.fileLink + '" target="_blank" class="btn-small waves-effect waves-light">';
+      html += '<i class="material-icons left">description</i>View Resume</a>';
+      html += '</div>';
+      html += '</li>';
+    });
+    html += '</ul>';
+    
+    if (results.length > 5) {
+      html += '<p class="center-align">And ' + (results.length - 5) + ' more results available in the spreadsheet.</p>';
+    }
+  }
+  
+  return html;
+}
