@@ -32,7 +32,9 @@ As AI continues to transform the hiring landscape, understanding how resume scan
 **Article/Study**
 
 *Summary*
+
 Title: Using Artificial Intelligence for Hiring Talents in a Moderated Mechanism
+
 Authors: Muhaiminul Islam, Md. Mahbubur Rahman, Md. Abu Taher, G. M. Azmal Ali Quaosar & Md. Aftab Uddin
 
 *Responsible AI Considerations:*
