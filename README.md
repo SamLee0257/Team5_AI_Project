@@ -27,7 +27,13 @@ As AI continues to transform the hiring landscape, understanding how resume scan
 - Artificial Intelligence is transforming a lot of the world that we live in today, and many aspects of the business world. Specifically, companies have begun to incorporate AI into how they source, evaluate and hire talent. For prospective candidates looking for job opportunities, and specifically for MSBA students, being able to understand how the processes work is not only intellectually relevant, but practically urgent.
 - Companies now receive thousands of applications per role, so they have begun to use Applicant Tracking Systems (ATS), which are powered by AI and machine learning algorithms, to parse and screen candidates’ resumes. Applicant Tracking systems filter resumes based on keyword matching, experience patterns and degree requirements. Now, candidates have to alter their resumes to best pass AI screenings.
 - This raises some ethical concerns as people begin to question if AI can faily determine who is the “best fit”? What kind of safeguards exist against discrimination? What kind of data was the model trained on?
-- As many of us look for jobs, it is extremely important to understand and know how to best market yourself, to increase your chances against AI screenings 
+- As many of us look for jobs, it is extremely important to understand and know how to best market yourself, to increase your chances against AI screenings
+
+**Article/Study**
+
+*Summary*
+Title: Using Artificial Intelligence for Hiring Talents in a Moderated Mechanism
+Authors: Muhaiminul Islam, Md. Mahbubur Rahman, Md. Abu Taher, G. M. Azmal Ali Quaosar & Md. Aftab Uddin
 
 *Responsible AI Considerations:*
 As we examine the use of AI in Human Resources—specifically, resume screening tools—we recognize the importance of designing and evaluating these systems with responsibility, transparency, and fairness at the core. Key responsible AI principles we considered include:
