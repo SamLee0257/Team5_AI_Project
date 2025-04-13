@@ -50,7 +50,7 @@ As AI continues to transform the hiring landscape, understanding how resume scan
 - HR professionals should focus on performance benefits and enjoyable user experiences to drive adoption.
 - Gender-sensitive training may help address effort-related adoption barriers.
 
-*Responsible AI Considerations:*
+**Responsible AI Considerations:**
 As we examine the use of AI in Human Resources—specifically, resume screening tools—we recognize the importance of designing and evaluating these systems with responsibility, transparency, and fairness at the core. Key responsible AI principles we considered include:
 -  ***Fairness and Bias Mitigation:*** AI-driven resume scanners may inadvertently learn and perpetuate historical biases present in hiring data (e.g., gender, race, or educational background). Our project explores how training data, feature selection, and model design can introduce bias—and how techniques like auditing, de-biasing, and algorithmic fairness checks can help mitigate it.
 -  ***Transparency and Explainability:*** Resume scanning tools are often "black boxes" to applicants. We advocate for models that offer explainable outputs, so hiring teams understand why certain resumes are filtered or ranked. Transparency is essential not only for building trust, but also for compliance with evolving AI governance regulations.
