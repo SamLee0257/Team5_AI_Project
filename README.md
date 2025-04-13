@@ -23,6 +23,9 @@ Solution: We developed a model that classifies resumes as "qualified" or "not qu
 *What Next?*
 As AI continues to transform the hiring landscape, understanding how resume scanners shape access to opportunities is more critical than ever. Looking forward, organizations will need to adopt more ethical AI practices, invest in explainable tools, and ensure human oversight in automated hiring. With the rise of regulations and increased public awareness, the future of AI in HR will demand both innovation and responsibility.
 
+*Relevance to the Real World*
+
+
 *Responsible AI Considerations:*
 As we examine the use of AI in Human Resources—specifically, resume screening tools—we recognize the importance of designing and evaluating these systems with responsibility, transparency, and fairness at the core. Key responsible AI principles we considered include:
 -  ***Fairness and Bias Mitigation:*** AI-driven resume scanners may inadvertently learn and perpetuate historical biases present in hiring data (e.g., gender, race, or educational background). Our project explores how training data, feature selection, and model design can introduce bias—and how techniques like auditing, de-biasing, and algorithmic fairness checks can help mitigate it.
