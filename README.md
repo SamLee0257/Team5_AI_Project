@@ -20,6 +20,24 @@ The system will include:
 
 Solution: We developed a model that classifies resumes as "qualified" or "not qualified" based on key attributes. Additionally, we created a user-friendly website powered by AI to filter resumes, automatically generating a Google Sheet that lists resumes matching the specified criteria.
 
+*Website Creation Via Vibe Coding*
+We utlizized Claude AI using vibe coding to assist in creating the website we wanted. Our **original prompt** to Claude was as follows: 
+
+"I am building a resume filter website using Google Apps Script. I want to be able to filter a file of resumes stored as google docs on google drive. The user of the site will select a folder, input minimum GPA, a comma-separated list of universities, and a list of keywords (comma-separated). If a filter is left blank then it is not filtered by that parameter. I want the output to be a google sheet that pulls the following information from the resume; Full Name, phone number, email address, GPA, University(s), keywords, and a link to the specific resume. I want the title of this sheet to include the time of the filtering for sorting purposes. For error treatment if the filtering ai cannot find information then leave it blank. I want two sets of code, a front end with the file input, the three filter boxes and a submit button. Lets also make it green and gold for William and Mary colors. I also need the back end code to have the filtering systems that do as follows: 
+
+Parse each resume and check:
+If the GPA meets or exceeds the threshold.
+If the resume mentions any of the listed universities (case-insensitive match).
+If the resume contains any of the listed keywords (case-insensitive match).
+
+Produce both sets of code along with Google cloud APIs I must activate."
+
+This produced both necessary codes and with a couple tweaks to the code outputted a working site that can be seen here. 
+
+https://script.google.com/macros/s/AKfycbxRTu8sSpwH7BWNHZe2h7H2Jhs9kcMhkhNvCa3qbBxTAYf-5jMI_7OvTxZeMr4R4ce_/exec
+
+
+
 *What Next?*
 As AI continues to transform the hiring landscape, understanding how resume scanners shape access to opportunities is more critical than ever. Looking forward, organizations will need to adopt more ethical AI practices, invest in explainable tools, and ensure human oversight in automated hiring. With the rise of regulations and increased public awareness, the future of AI in HR will demand both innovation and responsibility.
 
