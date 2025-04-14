@@ -20,6 +20,8 @@ The system will include:
 
 Solution: We developed a model that classifies resumes as "qualified" or "not qualified" based on key attributes. Additionally, we created a user-friendly website powered by AI to filter resumes, automatically generating a Google Sheet that lists resumes matching the specified criteria.
 
+*Deep Learning Resume Classification Model*: For this project, we generated synthetic data to simulate grad school applications and classify candidates as qualified or not based on a predefined list of desired and undesired attributes (e.g., skills, experiences). To introduce realism, we added noise to the dataset—ensuring that "qualified" entries still contained some unqualified traits and vice versa. Using this dataset, we trained a deep learning model that was able to predict candidate qualification with nearly 90% accuracy.
+
 *Website Creation Via Vibe Coding*:
 We utlizized Claude AI using vibe coding to assist in creating the website we wanted. Our **original prompt** to Claude was as follows: 
 
