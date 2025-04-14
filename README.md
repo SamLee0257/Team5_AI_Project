@@ -36,7 +36,7 @@ Produce both sets of code along with Google cloud APIs I must activate."
 
 This produced both necessary codes and with a couple tweaks to the code outputted a working site that can be seen here. 
 
-https://script.google.com/macros/s/AKfycbxRTu8sSpwH7BWNHZe2h7H2Jhs9kcMhkhNvCa3qbBxTAYf-5jMI_7OvTxZeMr4R4ce_/exec
+https://script.google.com/macros/s/AKfycbxebbf_q_QWJwgAheb0ByHn_uWW4OCWReFAdsv-Po80Nhgl0C9eGR2Cwv2kl8ud3kZF/exec
 
 *Authentication*
 Contact this email for permission to use: drew.messick03@gmail.com
