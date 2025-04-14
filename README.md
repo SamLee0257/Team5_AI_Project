@@ -36,6 +36,9 @@ This produced both necessary codes and with a couple tweaks to the code outputte
 
 https://script.google.com/macros/s/AKfycbxRTu8sSpwH7BWNHZe2h7H2Jhs9kcMhkhNvCa3qbBxTAYf-5jMI_7OvTxZeMr4R4ce_/exec
 
+*Authentication*
+Contact this email for permission to use: drew.messick03@gmail.com
+
 
 
 *What Next?*
